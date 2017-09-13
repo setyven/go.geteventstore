@@ -118,7 +118,7 @@ func (s *StreamReader) Next() bool {
 
 	//There are events returned, get the event for the current version
 	entry := s.feedPage.Entry[s.index]
-	url := strings.TrimRight(entry.Link[1].Href, "/")
+	url := strings.Replace(strings.TrimRight(entry.Link[1].Href, "/"), "%2540", "%252540", 1)
 	e, _, err := s.client.GetEvent(url)
 	if err != nil {
 		s.lasterr = err
