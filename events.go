@@ -10,7 +10,7 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/jetbasrawi/go.geteventstore/internal/uuid"
+	"github.com/setyven/go.geteventstore/internal/uuid"
 )
 
 // EventResponse encapsulates the response for an event reflecting the atom
